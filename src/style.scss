@@ -1,38 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+
+ // VARIABLES DE COLOR
+
+  $blanco: #ffffff;
+  $negro: #000000;
+  $rosa-principal: #DBA3C9;
+  $naranja-hover: #BA7425;
+  $azul: #8299CC;
+
+  //TIPOGRAFÍA
+
+  $fuente-principal: "Baloo 2", sans-serif;
+
+
 .hero {
   height: 100vh;
   background-image: url("./img/fondo3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+    p{
+      font-family: $fuente-principal;
+      font-weight: 800;
+      -webkit-text-stroke: 0.1px $blanco;
+    }
 }
 
-/* 👇 media query FUERA */
-@media (max-width: 768px) {
-  .hero {
-    background-position:right;
-  }
+    /* 👇 media query FUERA */
+      @media (max-width: 768px) {
+        .hero {
+        background-position:right;
+      }
+    }
+
+
+h1{
+  font-family: $fuente-principal;
+  color: $blanco;
+  font-weight: 800;
+  -webkit-text-stroke: 3px $blanco;
+
 }
 
-h1 {
-  font-family: "Baloo 2", sans-serif;
-  color: #ffffff;
+h2 , h3 , h4 {
+  font-family: $fuente-principal;
+  color: $blanco;
   font-weight: 900;
+  font-size: 24px; // mejor para acordeón y cards
 }
 
 p{
-    color: #ffffff;
+    color: $blanco;
     font-weight: 600;
-    font-family: "Baloo 2", sans-serif;
+    font-family: $fuente-principal;
+    -webkit-text-stroke: 0.2px $blanco;
 }
 
+
 .btn{
-  background-color: #DBA3C9;
-  color: #000000;
+  background-color: $naranja-hover;
+  color: $blanco;
   border: none;
 
   &:hover {
-    background-color: #BA7425;
-    color: #000;
+    background-color: $rosa-principal;
+    color: $blanco;
   }
 }
 
@@ -41,20 +80,27 @@ p{
   object-fit: cover;
 }
 
-h4{
-  font-family: "Baloo 2", sans-serif;
-  color: #ffffff;
-  font-weight: 900;
-}
-
-h5{
-  font-family: "Baloo 2", sans-serif;
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 40px;
-}
-
 .slider-img {
   height: 60vh;
   object-fit: cover;
+}
+
+.navbar {
+  background-color: $blanco;
+}
+
+.nav-link {
+  color: $naranja-hover;
+
+  &:hover {
+    color: $rosa-principal;
+  }
+}
+
+.emoji {
+  color: $naranja-hover;
+}
+
+.accordion-button {
+  color: $naranja-hover;
 }
